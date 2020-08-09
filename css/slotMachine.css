@@ -1,0 +1,13 @@
+.header-content { 
+    padding:10px 0px;
+}
+
+.randomizeMachine { 
+    background: #f1f1f1;
+    height: 120px;
+    text-align: center;
+}
+
+.machineResultTop, .machineResultCenter, .machineResultBottom { 
+    display: none;
+}

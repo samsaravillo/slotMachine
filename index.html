@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sam Saravillo | Slot Machine </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script src="./dist/slotmachine.js"></script>
+        <script src="./dist/jquery.slotmachine.js"></script>
+
+        <link rel="stylesheet" href="./dist/jquery.slotmachine.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="./css/slotMachine.css" type="text/css" media="screen" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      
+	</head>
+	<body>
+            <div id="randomize">
+                    <div class="container machineCenter">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="header-content">
+                              <h1>Slot machine</h1>
+                              <div class="row">
+                                <div class="col-sm-6">
+                                  <div class="btn-group btn-group-justified" role="group">
+                                      <button id="randomizeButton" type="button" class="btn btn-danger btn-lg">SPIN</button>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                  <input type="number" id="current_balance" value="0" class="form-control-lg"> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--Top row-->
+                        <div class="row"> 
+                          <div class="col-sm-4">
+                            <div>
+                                <div id="machine1Top" class="randomizeMachine">
+                                  <div><img src="images/3xBAR.png" /></div>
+                                  <div><img src="images/BAR.png" /></div>
+                                  <div><img src="images/2xBAR.png" /></div>
+                                  <div><img src="images/7.png" /></div>
+                                  <div><img src="images/Cherry.png" /></div>
+                                </div>
+                            </div>
+                            <div id="machine1ResultTop" class="col-xs-4 machineResultTop">0</div>
+                          </div>
+                          
+                          <div class="col-sm-4">
+                              <div>
+                                  <div id="machine2Top" class="randomizeMachine">
+                                      <div><img src="images/3xBAR.png" /></div>
+                                      <div><img src="images/BAR.png" /></div>
+                                      <div><img src="images/2xBAR.png" /></div>
+                                      <div><img src="images/7.png" /></div>
+                                      <div><img src="images/Cherry.png" /></div>
+                                  </div>
+                              </div>
+                            <div id="machine2ResultTop" class="col-xs-4 machineResultTop">0</div>
+                          </div>
+
+                          <div class="col-sm-4">
+                              <div>
+                                  <div id="machine3Top" class="randomizeMachine">
+                                      <div><img src="images/3xBAR.png" /></div>
+                                      <div><img src="images/BAR.png" /></div>
+                                      <div><img src="images/2xBAR.png" /></div>
+                                      <div><img src="images/7.png" /></div>
+                                      <div><img src="images/Cherry.png" /></div>
+                                  </div>
+                              </div>
+                            <div id="machine3ResultTop" class="col-xs-4 machineResultTop">0</div>
+                          </div>
+                        </div>
+                        <!--end Top row-->
+
+                        <!--Center/Middle Row-->
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <div>
+                              <div id="machine1Center" class="randomizeMachine">
+                                  <div><img src="images/3xBAR.png" /></div>
+                                  <div><img src="images/BAR.png" /></div>
+                                  <div><img src="images/2xBAR.png" /></div>
+                                  <div><img src="images/7.png" /></div>
+                                  <div><img src="images/Cherry.png" /></div>
+                              </div>
+                            </div>
+                            <div id="machine1ResultCenter" class="col-xs-4 machineResultCenter">0</div>
+                          </div>
+                
+                          <div class="col-sm-4">
+                            <div>
+                              <div id="machine2Center" class="randomizeMachine">
+                                  <div><img src="images/3xBAR.png" /></div>
+                                  <div><img src="images/BAR.png" /></div>
+                                  <div><img src="images/2xBAR.png" /></div>
+                                  <div><img src="images/7.png" /></div>
+                                  <div><img src="images/Cherry.png" /></div>
+                              </div>
+                            </div>
+                            <div id="machine2ResultCenter" class="col-xs-4 machineResultCenter">0</div>
+                          </div>
+                
+                          <div class="col-sm-4">
+                            <div>
+                              <div id="machine3Center" class="randomizeMachine">
+                                  <div><img src="images/3xBAR.png" /></div>
+                                  <div><img src="images/BAR.png" /></div>
+                                  <div><img src="images/2xBAR.png" /></div>
+                                  <div><img src="images/7.png" /></div>
+                                  <div><img src="images/Cherry.png" /></div>
+                              </div>
+                            </div>
+                            <div id="machine3ResultCenter" class="col-xs-4 machineResultCenter">0</div>
+                          </div>
+                        
+                        </div>
+                        <!--end Middle/Center Row-->
+
+                        <!--Bottom row-->
+                        <div class="row"> 
+                            <div class="col-sm-4">
+                              <div>
+                                  <div id="machine1Bottom" class="randomizeMachine">
+                                      <div><img src="images/3xBAR.png" /></div>
+                                      <div><img src="images/BAR.png" /></div>
+                                      <div><img src="images/2xBAR.png" /></div>
+                                      <div><img src="images/7.png" /></div>
+                                      <div><img src="images/Cherry.png" /></div>
+                                  </div>
+                              </div>
+                              <div id="machine1ResultBottom" class="col-xs-4 machineResultBottom">0</div>
+                            </div>
+                            
+                            <div class="col-sm-4">
+                                <div>
+                                    <div id="machine2Bottom" class="randomizeMachine">
+                                        <div><img src="images/3xBAR.png" /></div>
+                                        <div><img src="images/BAR.png" /></div>
+                                        <div><img src="images/2xBAR.png" /></div>
+                                        <div><img src="images/7.png" /></div>
+                                        <div><img src="images/Cherry.png" /></div>
+                                    </div>
+                                </div>
+                              <div id="machine2ResultBottom" class="col-xs-4 machineResultBottom">0</div>
+                            </div>
+  
+                            <div class="col-sm-4">
+                                <div>
+                                    <div id="machine3Bottom" class="randomizeMachine">
+                                        <div><img src="images/3xBAR.png" /></div>
+                                        <div><img src="images/BAR.png" /></div>
+                                        <div><img src="images/2xBAR.png" /></div>
+                                        <div><img src="images/7.png" /></div>
+                                        <div><img src="images/Cherry.png" /></div>
+                                    </div>
+                                </div>
+                              <div id="machine3ResultBottom" class="col-xs-4 machineResultBottom">0</div>
+                            </div>
+                          </div>
+                          <!--end Bottom row-->
+
+                      </div>
+                  </div>
+              <script src="js/samSlotMachine.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	</body>
+</html>
