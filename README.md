@@ -1,1 +1,1 @@
-# slotMachine
+# SlotMachine
